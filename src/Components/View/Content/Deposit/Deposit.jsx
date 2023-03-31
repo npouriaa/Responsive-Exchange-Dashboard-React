@@ -119,7 +119,7 @@ const Deposit = () => {
   useEffect(() => {
     info();
     return () => {};
-  });
+  },[]);
 
   return (
     <div className="deposit-con">
