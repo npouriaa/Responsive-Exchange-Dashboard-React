@@ -1,0 +1,62 @@
+.reports-con {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 600px;
+}
+
+.reports-con .reports-content {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reports-con .reports-type-con {
+  overflow: hidden;
+  padding: 5px 10px;
+  display: flex;
+  gap: 15px;
+  background-color: #000;
+  border-radius: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.reports-con .reports-type-con .reports-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: transparent;
+  outline: none;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.2s;
+  gap: 5px;
+}
+
+.reports-con .reports-type-con .reports-tab-line {
+  transition: all 0.2s;
+  height: 2px;
+  background-color: #8acd02;
+  width: 105px;
+  position: absolute;
+  bottom: 8px;
+  border-radius: 10px;
+  left: 1865px;
+}
+
+.reports-con .table-con {
+  width: 100%;
+  display: none;
+  height: 450px;
+  border-radius: 20px;
+  margin-top: 10px;
+  overflow-y: auto;
+  background-color: #d0e1e9;
+  padding: 20px;
+}

@@ -1,0 +1,235 @@
+.header {
+  height: 60px;
+  width: 90%;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media (min-width: 961px) {
+  main {
+    width: 680px;
+  }
+}
+
+@media (min-width: 1025px) {
+  main {
+    width: 1100px;
+  }
+}
+
+.icons {
+  position: absolute;
+  align-items: center;
+  flex-direction: row-reverse;
+  display: flex;
+}
+
+.hBtn {
+  position: relative;
+  margin-right: 15px;
+  outline: none;
+  border: none;
+  background-color: #fff;
+  box-shadow: 0 0 25px 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.usersBtn {
+  font-size: 20px;
+  justify-content: space-evenly;
+  display: flex;
+  border-radius: 15px;
+  width: 80px;
+  position: relative;
+}
+
+.usersBtn .i-badge {
+  position: absolute;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: limegreen;
+  right: 16px;
+  top: 20px;
+}
+
+.usersBtn:focus .ac-drop-drown {
+  display: block;
+}
+
+.header-items-modal {
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  border-radius: 20px;
+  box-shadow: 0 0 25px 3px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  padding: 10px 0;
+  flex-direction: column;
+
+  display: none;
+}
+
+.ac-drop-drown {
+  z-index: 10;
+  bottom: -320px;
+  width: 250px;
+  height: 310px;
+}
+
+.ac-drop-drown .header {
+  padding: 20px;
+  width: 100%;
+  height: 80px;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #dded;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.ac-drop-drown .header .header-username {
+  width: 100%;
+}
+
+.ac-drop-drown .header .header-status {
+  width: 100%;
+  font-size: 14px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #dded;
+}
+
+.ac-drop-drown .header .header-status span {
+  width: 8px;
+  height: 8px;
+  background-color: limegreen;
+  margin-left: 10px;
+  border-radius: 50%;
+}
+
+.ac-drop-drown ul {
+  list-style: none;
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
+  flex-direction: column;
+  display: flex;
+}
+
+.ac-drop-drown .my-acc {
+  border-bottom: 1px solid #dded;
+  align-items: center;
+}
+
+.ac-drop-drown .others li {
+  margin-top: 8px;
+}
+
+.ac-drop-drown li {
+  width: 100%;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  transition: all 0.2s;
+}
+
+.ac-drop-drown li .icon {
+  margin-left: 10px;
+}
+
+.ac-drop-drown li:hover {
+  background-color: #dbebf273;
+}
+
+.a-d {
+  font-size: 17px;
+}
+
+.notif-btn:focus .notif-drop-down {
+  display: block;
+}
+
+.messages-btn:focus .messages-drop-down {
+  display: block;
+}
+
+.mnModal {
+  width: 300px;
+  height: 290px;
+  position: absolute;
+  z-index: 10;
+  bottom: -300px;
+}
+
+.mnModal .header {
+  width: 100%;
+}
+
+.mnModal .header .title {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 15px;
+}
+
+.mnModal .content {
+  width: 100%;
+  height: 160px;
+}
+
+.mnModal .content .tabs {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  padding: 0 15px;
+  justify-content: space-between;
+  list-style: none;
+  font-size: 14px;
+  position: relative;
+}
+
+.mnModal .content .tabs .tab-line {
+  height: 2px;
+  bottom: 10px;
+  position: absolute;
+  left: 211px;
+  background-color: #8acd02;
+  border-radius: 8px;
+  transition: all 0.2s;
+  width: 74px;
+}
+
+.mnModal .content .tab-content {
+  width: 100%;
+  height: 130px;
+  padding: 15px;
+  position: relative;
+}
+
+.mnModal .content .tab-content .text {
+  width: 100%;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.myAccount-frm{
+  width: 100%;
+}
