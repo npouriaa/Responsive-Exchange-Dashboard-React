@@ -1,21 +1,3 @@
 .container {
-  background-color: #dbebf2;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@media (min-width: 961px) {
-  .container {
-    height: 610px;
-  }
-}
-
-@media (min-width: 1025px) {
-  .container {
-    height: 740px;
-  }
+  background-color: #e5eff3;
 }

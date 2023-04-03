@@ -1,0 +1,48 @@
+.login-con {
+  border-radius: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  
+}
+.frmLogin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.loginItem {
+  width: 100%;
+}
+
+.login-img-con {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-img-con img {
+  width: 80%;
+}
+
+@media (min-width: 320px) {
+  .login-con {
+    width: 315px;
+    height: 350px;
+  }
+}
+@media (min-width: 481px) {
+  .login-con {
+    width: 415px;
+    height: 600px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .login-con {
+    width: 515px;
+    height: 650px;
+  }
+}

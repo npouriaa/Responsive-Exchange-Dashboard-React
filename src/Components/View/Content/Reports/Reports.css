@@ -60,3 +60,27 @@
   background-color: #d0e1e9;
   padding: 20px;
 }
+
+.ant-spin-container {
+  width: 100%;
+}
+
+.ant-spin-nested-loading {
+  overflow-x: auto;
+}
+
+.reports-con .table-con .ant-table-wrapper .ant-table {
+  overflow-x: auto;
+}
+
+@media (min-width: 320px) {
+  .reports-con .table-con .ant-table-wrapper .ant-table {
+    width: 800px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .reports-con .table-con .ant-table-wrapper .ant-table {
+    width: 100%;
+  }
+}

@@ -4,29 +4,29 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  gap: 10px;
+  gap: 6px;
   flex-wrap: wrap;
 }
 
 .chart {
-  height: 300px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 500px;
   background-color: #d0e1e9;
   border-radius: 20px;
   padding: 20px;
 }
 
-@media (min-width: 961px) {
-  .charts-con {
-    height: 650px;
+@media (min-width: 320px) {
+  .chart {
+    height: 200px;
+    width: 450px;
   }
 }
 
-@media (min-width: 1025px) {
-  .charts-con {
-    height: 370px;
+@media (min-width: 641px) {
+  .chart {
+    height: 300px;
+    width: 500px;
   }
 }

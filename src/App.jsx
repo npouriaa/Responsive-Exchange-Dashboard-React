@@ -1,28 +1,23 @@
 //imports
-import React, { useState } from "react";
+import React from "react";
+import Login from "./Components/View/Login/Login";
+import MainPage from "./Components/View/MainPage/MainPage";
+import UseToken from "./Components/App/UseToken";
 import "./App.css";
-import Content from "./Components/View/Content/Content";
-import SideMenu from "./Components/View/SideMenu/SideMenu";
+
 
 const App = () => {
-  //states
-  const [contentConRef, setContentConRef] = useState();
-  const [headerTitle , setHeaderTitle] = useState('داشبورد')
-
-  const handleDataFromChild = (data) => {
-    setContentConRef(data);
-  };
-
-  //this function show page title
-  const shwoHeaderTitle = (data) => {
-    let title = data.textContent
-    setHeaderTitle(title)
-  };
+  //destructuring
+  const {token , setToken} = UseToken()
+  
+  // if the token doesn't exist this function wil invoke an render the login component and other components are no able to see and use
+  if (!token) {
+    return <Login setToken={setToken} />;
+  }
 
   return (
     <div className="container">
-      <SideMenu shwoHeaderTitle={shwoHeaderTitle} contentConRef={contentConRef} />
-      <Content headerTitle ={headerTitle} sendData={handleDataFromChild} />
+      <MainPage />
     </div>
   );
 };

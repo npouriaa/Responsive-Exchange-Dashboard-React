@@ -15,7 +15,6 @@
   flex-direction: column;
   gap: 5px;
   overflow-y: auto;
-  
 }
 
 .deposit-con .deposit-frm {
@@ -26,10 +25,6 @@
   background-color: #d0e1e9;
   overflow-y: auto;
   margin-top: 10px;
-}
-
-.deposit-con .deposit-frm .frm-item-deposit {
-  width: 50%;
 }
 
 .deposit-con .deposit-frm .submit-btn {
@@ -62,7 +57,6 @@
   transition: all 0.2s;
   gap: 5px;
 }
-
 
 .deposit-con .deposit-type-con .deposit-type img {
   width: 40px;

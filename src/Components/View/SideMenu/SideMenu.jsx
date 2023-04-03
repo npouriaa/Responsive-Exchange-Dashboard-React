@@ -31,11 +31,11 @@ const SideMenu = (props) => {
   const triggerHandler = (e) => {
     e.target.classList.toggle("close");
     if (e.target.classList.contains("close")) {
-      props.contentConRef.current.classList.add("main-r");
+      // props.contentConRef.current.classList.add("main-r");
       asideRef.current.style.width = "80px";
       setAsideWidth(false);
     } else {
-      props.contentConRef.current.classList.remove("main-r");
+      // props.contentConRef.current.classList.remove("main-r");
       asideRef.current.style.width = "220px";
       setAsideWidth(true);
     }

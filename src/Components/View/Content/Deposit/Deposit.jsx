@@ -202,7 +202,7 @@ const Deposit = () => {
             {showContent === "amount-input" ? (
               <div className="">
                 <Form.Item
-                  className="acc-input frm-item-deposit"
+                  className="acc-input frm-item"
                   hasFeedback
                   name="account"
                   label="انتخاب حساب"
@@ -226,7 +226,7 @@ const Deposit = () => {
                   </Select>
                 </Form.Item>
                 <Form.Item
-                  className="frm-item-deposit"
+                  className="frm-item"
                   label="مبلغ"
                   name="amount"
                   hasFeedback
@@ -255,7 +255,7 @@ const Deposit = () => {
             ) : showContent === "master-card" ? (
               <div className="master-card-frm">
                 <Form.Item
-                  className="acc-input frm-item-deposit"
+                  className="acc-input frm-item"
                   hasFeedback
                   name="account"
                   label="انتخاب حساب"
@@ -279,7 +279,7 @@ const Deposit = () => {
                   </Select>
                 </Form.Item>
                 <Form.Item
-                  className="frm-item-deposit"
+                  className="frm-item"
                   label="مبلغ"
                   name="amount"
                   hasFeedback
@@ -339,7 +339,7 @@ const Deposit = () => {
                 </div>
                 <div className="card-number-input">
                   <Form.Item
-                    className="frm-item-deposit"
+                    className="frm-item"
                     label="شماره کارت"
                     name="card_number"
                     hasFeedback
@@ -360,7 +360,7 @@ const Deposit = () => {
                     <Input onChange={(e) => fillCardNumber(e)} />
                   </Form.Item>
                   <Form.Item
-                    className="frm-item-deposit"
+                    className="frm-item"
                     label="سال انقضا"
                     name="card_expire"
                     type="number"
@@ -382,7 +382,7 @@ const Deposit = () => {
                     <Input onChange={(e) => fillCardDetails(e, expireRef, 4)} />
                   </Form.Item>
                   <Form.Item
-                    className="frm-item-deposit"
+                    className="frm-item"
                     label="card holder"
                     name="card_holder"
                     hasFeedback
@@ -405,7 +405,7 @@ const Deposit = () => {
                     />
                   </Form.Item>
                   <Form.Item
-                    className="frm-item-deposit"
+                    className="frm-item"
                     label="cvc"
                     name="card_cvc"
                     hasFeedback
@@ -451,7 +451,7 @@ const Deposit = () => {
             ) : showContent === "crypto" ? (
               <div>
                 <Form.Item
-                  className="acc-input frm-item-deposit"
+                  className="acc-input frm-item"
                   hasFeedback
                   name="account"
                   label="انتخاب حساب"
@@ -475,7 +475,7 @@ const Deposit = () => {
                   </Select>
                 </Form.Item>
                 <Form.Item
-                  className="frm-item-deposit"
+                  className="frm-item"
                   label="مبلغ"
                   name="amount"
                   hasFeedback
@@ -492,7 +492,7 @@ const Deposit = () => {
                   <Input prefix={<PoundCircleOutlined />} />
                 </Form.Item>
                 <Form.Item
-                  className="frm-item-deposit"
+                  className="frm-item"
                   hasFeedback
                   name="currency"
                   label="ارز"
@@ -513,7 +513,7 @@ const Deposit = () => {
                   </Select>
                 </Form.Item>
                 <Form.Item
-                  className="frm-item-deposit"
+                  className="frm-item"
                   hasFeedback
                   name="network"
                   label="شبکه"
@@ -536,7 +536,7 @@ const Deposit = () => {
                   )}
                 </Form.Item>
                 <Form.Item
-                  className="frm-item-deposit"
+                  className="frm-item"
                   label="نام و نام خانوادگی"
                   name="name_family"
                   hasFeedback
@@ -550,7 +550,7 @@ const Deposit = () => {
                   <Input />
                 </Form.Item>
                 <Form.Item
-                  className="frm-item-deposit"
+                  className="frm-item"
                   label="آدرس"
                   name="address"
                   hasFeedback
@@ -566,7 +566,7 @@ const Deposit = () => {
                 <Form.Item
                   name="email"
                   label="ایمیل"
-                  className="frm-item-deposit"
+                  className="frm-item"
                   hasFeedback
                   rules={[
                     {

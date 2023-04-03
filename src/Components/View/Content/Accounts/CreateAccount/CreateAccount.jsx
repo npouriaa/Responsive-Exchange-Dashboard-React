@@ -66,7 +66,7 @@ const CreateAccount = () => {
         <Form ref={frmRef} onFinish={onFinish} className="add-user-form">
           <div className="frm-f">
             <Form.Item
-              className="frm-item"
+              className="frm-item-cr"
               label="نام و نام خانوادگی"
               name="account"
               hasFeedback
@@ -83,7 +83,7 @@ const CreateAccount = () => {
             <Form.Item
               name="email"
               label="ایمیل"
-              className="frm-item"
+              className="frm-item-cr"
               hasFeedback
               rules={[
                 {
@@ -100,6 +100,7 @@ const CreateAccount = () => {
             </Form.Item>
 
             <Form.Item
+              className="frm-item-cr"
               name="phone"
               label="شماره تلفن"
               hasFeedback
@@ -122,6 +123,7 @@ const CreateAccount = () => {
             </Form.Item>
             <Form.Item
               name="password"
+              className="frm-item-cr"
               label="رمز عبور"
               rules={[
                 {
@@ -135,6 +137,7 @@ const CreateAccount = () => {
             </Form.Item>
 
             <Form.Item
+              className="frm-item-cr"
               name="confrim"
               label="تایید رمز عبور"
               dependencies={["password"]}
@@ -161,7 +164,7 @@ const CreateAccount = () => {
           </div>
           <div className="frm-s">
             <Form.Item
-              className="frm-item"
+              className="frm-item-cr"
               hasFeedback
               name="platform"
               label="پلتفرم معامله"
@@ -180,7 +183,7 @@ const CreateAccount = () => {
             </Form.Item>
 
             <Form.Item
-              className="frm-item"
+              className="frm-item-cr"
               hasFeedback
               name="userType"
               label="نوع حساب"
@@ -197,7 +200,7 @@ const CreateAccount = () => {
             </Form.Item>
 
             <Form.Item
-              className="frm-item"
+              className="frm-item-cr"
               hasFeedback
               name="currency"
               label="نوع ارز"
@@ -218,7 +221,7 @@ const CreateAccount = () => {
             </Form.Item>
 
             <Form.Item
-              className="frm-item"
+              className="frm-item-cr"
               hasFeedback
               name="initial-deposite"
               label="سپرده اولیه"
@@ -236,6 +239,7 @@ const CreateAccount = () => {
               </Select>
             </Form.Item>
             <Form.Item
+            className="frm-item-cr"
               hasFeedback
               name="address"
               label="آدرس"

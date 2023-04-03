@@ -52,14 +52,13 @@ const Transfer = () => {
     frmRef.current?.resetFields();
   };
 
-
   return (
     <div className="transfer-con">
       {contextHolder}
       <div className="transfer-content">
         <Form ref={frmRef} onFinish={onFinish} className="transfer-frm">
           <Form.Item
-            className="acc-input frm-item-withdraw"
+            className="acc-input frm-item"
             hasFeedback
             name="from_account"
             label="از حساب"
@@ -83,7 +82,7 @@ const Transfer = () => {
             </Select>
           </Form.Item>
           <Form.Item
-            className="acc-input frm-item-withdraw"
+            className="acc-input frm-item"
             hasFeedback
             name="to_account"
             label="به حساب"
@@ -107,7 +106,7 @@ const Transfer = () => {
             </Select>
           </Form.Item>
           <Form.Item
-            className="frm-item-withdraw"
+            className="frm-item"
             label="مبلغ"
             name="amount"
             hasFeedback

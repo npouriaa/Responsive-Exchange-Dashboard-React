@@ -9,7 +9,7 @@
   margin: 0 auto;
   position: relative;
 }
-
+/* 
 @media (min-width: 961px) {
   main {
     width: 680px;
@@ -20,7 +20,7 @@
   main {
     width: 1100px;
   }
-}
+} */
 
 .icons {
   position: absolute;

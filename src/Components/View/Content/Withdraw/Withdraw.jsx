@@ -73,7 +73,7 @@ const Withdraw = () => {
       <div className="withdraw-content">
         <Form ref={frmRef} onFinish={onFinish} className="withdraw-frm">
           <Form.Item
-            className="acc-input frm-item-withdraw"
+            className="acc-input frm-item"
             hasFeedback
             name="account"
             label="انتخاب حساب"
@@ -97,7 +97,7 @@ const Withdraw = () => {
             </Select>
           </Form.Item>
           <Form.Item
-            className="acc-input frm-item-withdraw"
+            className="acc-input frm-item"
             hasFeedback
             name="withdraw_method"
             label="روش واریز"
@@ -122,7 +122,7 @@ const Withdraw = () => {
           ) : (
             <>
               <Form.Item
-                className="frm-item-withdraw"
+                className="frm-item"
                 hasFeedback
                 name="currency"
                 label="ارز"
@@ -143,7 +143,7 @@ const Withdraw = () => {
                 </Select>
               </Form.Item>
               <Form.Item
-                className="frm-item-withdraw"
+                className="frm-item"
                 hasFeedback
                 name="network"
                 label="شبکه"
@@ -168,7 +168,7 @@ const Withdraw = () => {
             </>
           )}
           <Form.Item
-            className="frm-item-withdraw"
+            className="frm-item"
             label="مبلغ"
             name="amount"
             hasFeedback
@@ -184,7 +184,7 @@ const Withdraw = () => {
           >
             <Input />
           </Form.Item>
-          <Form.Item className="frm-item-withdraw">
+          <Form.Item className="frm-item">
             <Button
               type="primary"
               htmlType="submit"

@@ -95,3 +95,9 @@ aside ul li .icon {
 aside ul li p {
   margin-right: 20px;
 }
+
+/* @media (min-width: 320px) {
+  aside{
+    display: none;
+  }
+} */
