@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# داشبورد صرافی با ساتفاده از ری اکت
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
