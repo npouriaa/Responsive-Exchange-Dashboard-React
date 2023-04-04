@@ -119,7 +119,7 @@ const Deposit = () => {
   useEffect(() => {
     info();
     return () => {};
-  },[]);
+  }, []);
 
   return (
     <div className="deposit-con">
@@ -295,44 +295,49 @@ const Deposit = () => {
                 >
                   <Input prefix={<PoundCircleOutlined />} />
                 </Form.Item>
-                <div className="flip-card">
-                  <div ref={cardInnerRef} className="flip-card-inner">
-                    <div className="flip-card-front">
-                      <div className="flip-card-front-header">
-                        <img
-                          src="https://cdn-icons-png.flaticon.com/512/6404/6404078.png"
-                          alt=""
-                        />
-                        <FontAwesomeIcon className="visaIcon" icon={faCcVisa} />
-                      </div>
-                      <div className="flip-card-front-card-number">
-                        <p ref={cardNumberRef1}>****</p>
-                        <p ref={cardNumberRef2}>****</p>
-                        <p ref={cardNumberRef3}>****</p>
-                        <p ref={cardNumberRef4}>****</p>
-                      </div>
-                      <div className="flip-card-front-card-details">
-                        <div className="card-holder">
-                          <p>Card Holder</p>
-                          <p ref={cardHolderRef}></p>
+                <div className="flip-card-container">
+                  <div className="flip-card">
+                    <div ref={cardInnerRef} className="flip-card-inner">
+                      <div className="flip-card-front">
+                        <div className="flip-card-front-header">
+                          <img
+                            src="https://cdn-icons-png.flaticon.com/512/6404/6404078.png"
+                            alt=""
+                          />
+                          <FontAwesomeIcon
+                            className="visaIcon"
+                            icon={faCcVisa}
+                          />
                         </div>
-                        <div className="card-expire">
-                          <p>Expire Year</p>
-                          <p ref={expireRef}></p>
+                        <div className="flip-card-front-card-number">
+                          <p ref={cardNumberRef1}>****</p>
+                          <p ref={cardNumberRef2}>****</p>
+                          <p ref={cardNumberRef3}>****</p>
+                          <p ref={cardNumberRef4}>****</p>
+                        </div>
+                        <div className="flip-card-front-card-details">
+                          <div className="card-holder">
+                            <p>Card Holder</p>
+                            <p ref={cardHolderRef}></p>
+                          </div>
+                          <div className="card-expire">
+                            <p>Expire Year</p>
+                            <p ref={expireRef}></p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="flip-card-back">
-                      <div className="flip-card-back-line"></div>
-                      <div className="cvc-con">
-                        <p>cvc</p>
-                        <div className="cvc-num-con">
-                          <p ref={cvcNumRef}></p>
+                      <div className="flip-card-back">
+                        <div className="flip-card-back-line"></div>
+                        <div className="cvc-con">
+                          <p>cvc</p>
+                          <div className="cvc-num-con">
+                            <p ref={cvcNumRef}></p>
+                          </div>
+                          <FontAwesomeIcon
+                            className="visaIcon visa-back"
+                            icon={faCcVisa}
+                          />
                         </div>
-                        <FontAwesomeIcon
-                          className="visaIcon visa-back"
-                          icon={faCcVisa}
-                        />
                       </div>
                     </div>
                   </div>

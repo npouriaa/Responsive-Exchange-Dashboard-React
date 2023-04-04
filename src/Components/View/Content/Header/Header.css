@@ -1,28 +1,18 @@
-.header {
-  height: 60px;
+.headerMain {
   width: 90%;
   padding: 6px;
   display: flex;
-  align-items: center;
-  flex-direction: row-reverse;
-  justify-content: space-between;
+  flex-direction: column-reverse;
   margin: 0 auto;
   position: relative;
 }
-/* 
-@media (min-width: 961px) {
-  main {
-    width: 680px;
-  }
+
+.page-title {
+  display: flex;
 }
 
-@media (min-width: 1025px) {
-  main {
-    width: 1100px;
-  }
-} */
-
 .icons {
+  top: 10px;
   position: absolute;
   align-items: center;
   flex-direction: row-reverse;
@@ -230,6 +220,46 @@
   justify-content: center;
 }
 
-.myAccount-frm{
+.myAccount-frm {
   width: 100%;
+}
+
+@media (min-width: 320px) {
+  .headerMain {
+    align-items: center;
+    height: 90px;
+  }
+  .menuBtn {
+    display: flex;
+  }
+  .notif-drop-down {
+    left: -100px;
+  }
+  .messages-drop-down {
+    left: -150px;
+  }
+}
+
+@media (min-width: 480px) {
+  .headerMain {
+    align-items: end;
+    height: 40px;
+  }
+  .page-title {
+    position: absolute;
+    right: 0;
+    top: 15px;
+  }
+}
+
+@media (min-width: 641px) {
+  .menuBtn {
+    display: none;
+  }
+  .notif-drop-down {
+    left: 0;
+  }
+  .messages-drop-down {
+    left: 0;
+  }
 }

@@ -1,12 +1,7 @@
 aside {
   transition: all 0.3s;
-  height: 100%;
   background-color: #000;
-  border-radius: 20px;
-  width: 220px;
   padding: 20px;
-  position: relative;
-  display: flex;
   justify-content: center;
 }
 
@@ -46,6 +41,16 @@ aside {
   right: 10px;
   background-color: #8acd02;
   border-radius: 8px;
+}
+
+.hideBtn{
+  background-color: transparent;
+  border: none;
+  color: red;
+  font-size: 30px;
+  position: absolute;
+  top: 15px;
+  left: 20px;
 }
 
 .trigger span {
@@ -88,16 +93,58 @@ aside ul li:hover {
   background-color: #dbebf273;
 }
 
-aside ul li .icon {
-  font-size: 20px;
-}
-
 aside ul li p {
   margin-right: 20px;
 }
 
-/* @media (min-width: 320px) {
-  aside{
+@media (min-width: 320px) {
+  aside {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    border-radius: 0;
+    width: 100vw;
+    height: 100%;
+  }
+  .trigger {
     display: none;
   }
-} */
+  .hideBtn{
+    display: block;
+  }
+}
+
+@media (min-width: 641px) {
+  aside {
+    height: 100%;
+    width: 220px;
+    position: relative;
+    border-radius: 20px;
+    display: flex;
+    z-index: 0;
+  }
+
+  .trigger {
+    display: flex;
+  }
+
+  aside ul li .icon {
+    font-size: 18px;
+  }
+  aside ul li {
+    font-size: 14px;
+  }
+  
+  .hideBtn{
+    display: none;
+  }
+}
+
+@media (min-width: 961px) {
+  aside ul li .icon {
+    font-size: 20px;
+  }
+  aside ul li {
+    font-size: 16px;
+  }
+}

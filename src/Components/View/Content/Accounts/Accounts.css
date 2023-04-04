@@ -25,7 +25,7 @@
 .accounts-con .accounts-con-header {
   border-radius: 10px;
   background-color: #000;
-  width: 90%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -34,7 +34,6 @@
 
 .accounts-con .accounts-con-header button {
   color: #fff;
-  font-size: 14px;
   background-color: transparent;
   border: none;
   outline: none;
@@ -154,4 +153,25 @@
   align-items: center;
   height: 100%;
   gap: 5px;
+}
+
+@media (min-width: 320px) {
+  .accounts-con .accounts-con-header button {
+    font-size: 10px;
+  }
+  .main-account{
+    justify-content: center;
+  }
+}
+
+@media (min-width: 480px) {
+  .accounts-con .accounts-con-header button {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 641px) {
+  .main-account{
+    justify-content: start;
+  }
 }

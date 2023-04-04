@@ -32,6 +32,16 @@ body {
   h2 {
     font-size: 20px;
   }
+  .frm-item {
+    width: 90%;
+  }
+}
+
+
+@media (min-width: 961px) {
+  .frm-item , .flip-card-container {
+    width: 60%;
+  }
 }
 
 @media (min-width: 1281px) {
@@ -39,12 +49,6 @@ body {
     font-size: 24px;
   }
   .frm-item {
-    width: 60%;
-  }
-}
-
-@media (min-width: 480px) {
-  .frm-item {
-    width: 80%;
+    width: 50%;
   }
 }

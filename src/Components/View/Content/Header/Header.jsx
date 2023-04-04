@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button, Modal, Tooltip, notification } from "antd";
 import { faUserCircle } from "@fortawesome/free-regular-svg-icons";
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown, faBars } from "@fortawesome/free-solid-svg-icons";
 import { faBell } from "@fortawesome/free-regular-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
@@ -138,16 +138,16 @@ const Header = (props) => {
   const [openMyAccount, setOpenMyAccount] = useState(false);
   const [open, setOpen] = useState(false);
   const [api, contextHolder] = notification.useNotification();
-  
+
   //Refs
   const tabRefsNotif = useRef([]);
   const tabLineRefNotif = useRef(null);
   const tabRefsMessages = useRef([]);
   const tabLineRefMessages = useRef(null);
-  
+
   //Variables
   const { Search } = Input;
-  
+
   // this function handle the tabs green underline width and position
   const tabLineHandler = (index, tabRefs, lineRef) => {
     let tabLineWidth = tabRefs.current[index].clientWidth;
@@ -192,8 +192,14 @@ const Header = (props) => {
     setOpenMyAccount(false);
   };
 
+  // this function get the asideRef from Content Component (parent) and change the aside display and send the (openInMobile) to sideMenuHandler function in Content Component (parent)
+  const showSideMenu = () => {
+    props.asideRef.current.style.display = "block";
+    props.sideMenuHandler('openInMobile')
+  };
+
   return (
-    <div className="header">
+    <div className="headerMain">
       {contextHolder}
       <LocalizedModal
         showModal={showModalMyAccount}
@@ -203,7 +209,6 @@ const Header = (props) => {
         hideModal={handleCancelMyAccount}
         openNotification={openNotification}
       />
-      <p></p>
       <div className="icons">
         <Tooltip title="حساب شما">
           <button className="hBtn usersBtn">
@@ -353,6 +358,11 @@ const Header = (props) => {
         <Tooltip title="جستجو">
           <button className="hBtn" onClick={showModal}>
             <FontAwesomeIcon icon={faMagnifyingGlass} />
+          </button>
+        </Tooltip>
+        <Tooltip title="منو">
+          <button className="hBtn menuBtn" onClick={() => showSideMenu()}>
+            <FontAwesomeIcon icon={faBars} />
           </button>
         </Tooltip>
         <Modal

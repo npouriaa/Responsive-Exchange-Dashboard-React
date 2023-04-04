@@ -1,7 +1,7 @@
 //imports
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { faUsers } from "@fortawesome/free-solid-svg-icons";
 import { faCircleArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { faCircleArrowUp } from "@fortawesome/free-solid-svg-icons";
@@ -15,7 +15,7 @@ import "./SideMenu.css";
 const SideMenu = (props) => {
   //state
   const [asideWidth, setAsideWidth] = useState(true);
-  
+
   //refs
   const liRefs = useRef([]);
   const asideRef = useRef();
@@ -31,14 +31,24 @@ const SideMenu = (props) => {
   const triggerHandler = (e) => {
     e.target.classList.toggle("close");
     if (e.target.classList.contains("close")) {
-      // props.contentConRef.current.classList.add("main-r");
       asideRef.current.style.width = "80px";
       setAsideWidth(false);
     } else {
-      // props.contentConRef.current.classList.remove("main-r");
       asideRef.current.style.width = "220px";
       setAsideWidth(true);
     }
+  };
+
+  //this function hide the sideMenu when the items clicked if user opened the app in mobile (if the device size is <641px)
+  const hideSideMenuInMobile = () => {
+    if (props.sideMenu === "openInMobile") {
+      asideRef.current.style.display = "none";
+    }
+  };
+
+  //this function close the sideMenu when the if the x-mark icon clicked 
+  const hideSideMenu = () => {
+    asideRef.current.style.display = "none";
   };
 
   //this function handle the items green underline width and position
@@ -47,6 +57,12 @@ const SideMenu = (props) => {
     lineRef.current.style.top = `${li_top}px`;
   };
 
+  //useEffects
+  useEffect(() => {
+    props.getAsideRef(asideRef);
+    return () => {};
+  }, []);
+
   return (
     <aside ref={asideRef}>
       <ul>
@@ -54,6 +70,7 @@ const SideMenu = (props) => {
           ref={(el) => (liRefs.current[0] = el)}
           onClick={() => {
             lineHandler(0);
+            hideSideMenuInMobile();
             props.shwoHeaderTitle(dashboard.current);
           }}
         >
@@ -67,6 +84,7 @@ const SideMenu = (props) => {
           onClick={() => {
             lineHandler(1);
             props.shwoHeaderTitle(accounts.current);
+            hideSideMenuInMobile();
           }}
         >
           <Link className="link side-link" to="/accounts">
@@ -78,6 +96,7 @@ const SideMenu = (props) => {
           ref={(el) => (liRefs.current[2] = el)}
           onClick={(e) => {
             lineHandler(2);
+            hideSideMenuInMobile();
             props.shwoHeaderTitle(deposit.current);
           }}
         >
@@ -90,6 +109,7 @@ const SideMenu = (props) => {
           ref={(el) => (liRefs.current[3] = el)}
           onClick={() => {
             lineHandler(3);
+            hideSideMenuInMobile();
             props.shwoHeaderTitle(withdraw.current);
           }}
         >
@@ -102,6 +122,7 @@ const SideMenu = (props) => {
           ref={(el) => (liRefs.current[4] = el)}
           onClick={() => {
             lineHandler(4);
+            hideSideMenuInMobile();
             props.shwoHeaderTitle(transfer.current);
           }}
         >
@@ -114,10 +135,11 @@ const SideMenu = (props) => {
           ref={(el) => (liRefs.current[5] = el)}
           onClick={() => {
             lineHandler(5);
+            hideSideMenuInMobile();
             props.shwoHeaderTitle(reports.current);
           }}
         >
-          <Link to='/reports' className="link side-link">
+          <Link to="/reports" className="link side-link">
             <FontAwesomeIcon className="icon" icon={faChartSimple} />
             <p ref={reports}>گزارشات</p>
           </Link>
@@ -133,6 +155,10 @@ const SideMenu = (props) => {
             <FontAwesomeIcon onClick={triggerHandler} icon={faArrowLeft} />
           )}
         </span>
+      </button>
+
+      <button className="hideBtn">
+        <FontAwesomeIcon onClick={() => hideSideMenu()} icon={faXmark} />
       </button>
     </aside>
   );

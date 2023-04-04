@@ -1,7 +1,7 @@
 .accounts-con .content {
   background-color: #d0e1e9;
   width: 90%;
-  height: 472px;
+  flex-wrap: wrap;
   border-radius: 20px;
   margin-top: 25px;
   padding: 20px;
@@ -9,27 +9,24 @@
 }
 
 .add-user-form {
-  width: 90%;
+  width: 100%;
   margin-top: 10px;
-  gap: 15px;
+  flex-wrap: wrap;
   display: flex;
+}
+
+.add-user-form .frm-item-cr {
+  width: 100% !important;
 }
 
 .add-user-form .frm-f,
 .add-user-form .frm-s {
-  width: 50%;
   display: flex;
   flex-direction: column;
-  gap: 15px;
 }
 
 .select {
   width: 100% !important;
-}
-
-.content .frm-item {
-  display: flex;
-  flex-direction: column !important;
 }
 
 .ant-form-item-label {
@@ -56,3 +53,27 @@
   color: #fff !important;
 }
 
+@media (min-width: 320px) {
+  .add-user-form .frm-f,
+  .add-user-form .frm-s {
+    width: 100%;
+  }
+}
+
+@media (min-width: 961px) {
+  .add-user-form .frm-f,
+  .add-user-form .frm-s {
+    width: 90%;
+    gap: 10px;
+  }
+  .add-user-form {
+    gap: 15px;
+  }
+}
+
+@media (min-width: 1281px) {
+  .add-user-form .frm-f,
+  .add-user-form .frm-s {
+    width: 45%;
+  }
+}
