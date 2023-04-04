@@ -4,15 +4,15 @@
 
 ### `node src/server.js`
 
-اجرای سرور بر روی پرت 8000 از مسیر src/server.js
+اجرای سرور بر روی پرت 8000 از مسیر src/server.js.
 
 ### `npm start`
 
-اجرای اپ در حالت development
+اجرای اپ در حالت development.
 
 ### ` شرح پروژه`
 
-پروژه داشبورد صرافی با استفاده از کتابخانه React ساخته شده , برای ui هم از CSS استفاده شده.
+پروژه داشبورد صرافی با استفاده از کتابخانه React ساخته شده , برای ui هم از CSS و شامل احراز هویت کاربر میباشد و استفاده شده
 این برنامه به زبان فارسی نوشته شده و شامل بخش های :
 
 صفحه ورود/
@@ -26,6 +26,7 @@
 در ابتدا برای استفاده و تست تمام قسمت های برنامه باید یک حساب کاربری از قسمت
 حساب ها > ایجاد حساب
 ایجاد کنید
+در این پروژه از Hook سفارشی برای مدیریت احراز هویت کاربر استفاده شده.
 
 ### `پکیج های استفاده شده`
 
@@ -34,7 +35,7 @@ react-router-dom : برای پیاده سازی و مدیریت route ها/
 Ant design : برای ساخت برخی ار المان ها و کامپوننت ها در ui/
 FontAwesome : برای ایحاد آیکون ها/
 Chart js : برای ایجاد نمودار ها در صفحه اصلی داشبورد/
-express,cors : برای ایجاد سرور و ساخت API
+express,cors : برای ایجاد سرور و ساخت API.
 
 
 # `Exchange Dashboard Using React`
@@ -51,7 +52,7 @@ to run the project in development mode
 
 ### `Project Description`
 
-The exchange dashboard project created by using React library and for the ui , CSS used.
+The exchange dashboard project created by using React library and the app include user authentication and for the ui , CSS used.
 this project build in persian language and it inclueds these sections :
 Login Page/
 Dashboard (Main Page)/
@@ -61,6 +62,7 @@ Transfer/
 Reports/
 
 At first for use and test the project all section you have to create account from حساب ها > ایجاد حساب
+In this project I used customized Hook for managing user authentication.  
 
 ### `Packages`
 
