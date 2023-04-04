@@ -1,70 +1,72 @@
-# داشبورد صرافی با ساتفاده از ری اکت
+# داشبورد صرافی با استفاده از ری اکت
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## برای اجرای پروژه در ابتدا باید دو دستور زیر را در ترمینال وارد کنید
 
-## Available Scripts
+### `node src/server.js`
 
-In the project directory, you can run:
+اجرای سرور بر روی پرت 8000 از مسیر src/server.js
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+اجرای اپ در حالت development
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### ` شرح پروژه`
 
-### `npm test`
+پروژه داشبورد صرافی با استفاده از کتابخانه React ساخته شده , برای ui هم از CSS استفاده شده.
+این برنامه به زبان فارسی نوشته شده و شامل بخش های :
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+صفحه ورود
+داشبورد (صفحه اصلی)
+حساب ها
+واریز
+برداشت
+انتقال
+گزارشات
+میباشد.
+در ابتدا برای استفاده و تست تمام قسمت های برنامه باید یک حساب کاربری از قسمت
+حساب ها > ایجاد حساب
+ایجاد کنید
 
-### `npm run build`
+### `پکیج های استفاده شده`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+پکیج های استفاده شده در این پروژه شامل :
+react-router-dom : برای پیاده سازی و مدیریت route ها
+Ant design : برای ساخت برخی ار المان ها و کامپوننت ها در ui
+FontAwesome : برای ایحاد آیکون ها
+Chart js : برای ایجاد نمودار ها در صفحه اصلی داشبورد
+express,cors : برای ایجاد سرور و ساخت API
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# `Exchange Dashboard Using React`
 
-### `npm run eject`
+## `To use the project at First you have to enter these two command in terminal`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### `node src/server.js`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To run the server on port:8000 from src/server.js
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### `npm start`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+to run the project in development mode
 
-## Learn More
+### `Project Description`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The exchange dashboard project created by using React library and for the ui , CSS used.
+this project build in persian language and it inclueds these sections :
+Login Page
+Dashboard (Main Page)
+Deposit
+Withdraw
+Transfer
+Reports
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+At first for use and test the project all section you have to create account from حساب ها > ایجاد حساب
 
-### Code Splitting
+### `Packages`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The packages used in this project include:
+react-router-dom : For create and managig routes
+Ant design : For create and use some elements and components in ui
+FontAwesome : for creating icons
+Chart js : For creating charts in dashboard main page
+express,cors : for creating server and API
