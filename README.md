@@ -12,8 +12,8 @@
 
 ### ` شرح پروژه`
 
-پروژه داشبورد با استفاده از کتابخانه React ساخته شده و شامل شامل احراز هویت کاربر میباشد و برای ui هم از CSS استفاده شده.
-شده این برنامه به زبان فارسی نوشته شده و شامل بخش های :
+پروژه داشبورد با استفاده از کتابخانه React ساخته شده و شامل احراز هویت کاربر میباشد و برای ui هم از CSS استفاده شده.
+ این برنامه به زبان فارسی نوشته شده و شامل بخش های :
 
 صفحه ورود/
 داشبورد (صفحه اصلی)/
@@ -32,7 +32,7 @@
 
 پکیج های استفاده شده در این پروژه شامل :
 react-router-dom : برای پیاده سازی و مدیریت route ها/
-Ant design : برای ساخت برخی ار المان ها و کامپوننت ها در ui/
+Ant design :  در ui برای ساهت برخی المان ها و کامپوننت ها
 FontAwesome : برای ایحاد آیکون ها/
 Chart js : برای ایجاد نمودار ها در صفحه اصلی داشبورد/
 express,cors : برای ایجاد سرور و ساخت API.
@@ -67,7 +67,7 @@ In this project I used customized Hook for managing user authentication.
 ### `Packages`
 
 The packages used in this project include:/
-react-router-dom : For create and managig routes/
+react-router-dom : For create and managing routes/
 Ant design : For create and use some elements and components in ui/
 FontAwesome : for creating icons/
 Chart js : For creating charts in dashboard main page/
