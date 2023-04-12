@@ -5,6 +5,7 @@
   flex-direction: column-reverse;
   margin: 0 auto;
   position: relative;
+  margin-bottom: 15px;
 }
 
 .page-title {

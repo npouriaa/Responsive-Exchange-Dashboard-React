@@ -101,8 +101,8 @@
   }
 }
 
-.ant-table-thead tr :nth-child(1),
-.ant-table-tbody tr :nth-child(1) {
+.table-con-reports .ant-table-thead tr :nth-child(1),
+.table-con-reports .ant-table-tbody tr :nth-child(1) {
   display: none;
 }
 

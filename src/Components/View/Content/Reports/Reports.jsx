@@ -338,7 +338,7 @@ const Reports = () => {
           </Link>
           <span ref={tabLineRef} className="reports-tab-line"></span>
         </div>
-        <div ref={tableConRef} className="table-con">
+        <div ref={tableConRef} className="table-con table-con-reports">
           <Table columns={tableColumns} dataSource={tableData} />
         </div>
       </div>
