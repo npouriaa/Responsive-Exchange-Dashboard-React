@@ -7,6 +7,7 @@ import Deposit from "../View/Content/Deposit/Deposit";
 import Withdraw from "../View/Content/Withdraw/Withdraw";
 import Transfer from "../View/Content/Transfer/Transfer";
 import Reports from "../View/Content/Reports/Reports";
+import Support from "../View/Content/Support/Support";
 
 //Routes
 const Routers = () => {
@@ -31,6 +32,7 @@ const Routers = () => {
         <Route path="withdraws-report" element={<></>} />
         <Route path="transfers-report" element={<></>} />
       </Route>
+      <Route path="support" element={<Support/>}></Route>
       <Route path="*" element={<Home />} />
     </Routes>
   );

@@ -1,7 +1,7 @@
 //imports
 import React, { useRef, useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faHeadset, faHome, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { faUsers } from "@fortawesome/free-solid-svg-icons";
 import { faCircleArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { faCircleArrowUp } from "@fortawesome/free-solid-svg-icons";
@@ -46,7 +46,7 @@ const SideMenu = (props) => {
     }
   };
 
-  //this function close the sideMenu when the if the x-mark icon clicked 
+  //this function close the sideMenu when the if the x-mark icon clicked
   const hideSideMenu = () => {
     asideRef.current.style.display = "none";
   };
@@ -142,6 +142,19 @@ const SideMenu = (props) => {
           <Link to="/reports" className="link side-link">
             <FontAwesomeIcon className="icon" icon={faChartSimple} />
             <p ref={reports}>گزارشات</p>
+          </Link>
+        </li>
+        <li
+          ref={(el) => (liRefs.current[6] = el)}
+          onClick={() => {
+            lineHandler(6);
+            hideSideMenuInMobile();
+            props.shwoHeaderTitle(reports.current);
+          }}
+        >
+          <Link to="/support" className="link side-link">
+            <FontAwesomeIcon className="icon" icon={faHeadset} />
+            <p ref={reports}>پشتیبانی</p>
           </Link>
         </li>
       </ul>

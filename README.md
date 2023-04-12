@@ -21,7 +21,8 @@
 واریز/
 برداشت/
 انتقال/
-گزارشات
+گزارشات/
+پشتیبانی
 میباشد.
 در ابتدا برای استفاده و تست تمام قسمت های برنامه باید یک حساب کاربری از قسمت
 حساب ها > ایجاد حساب
@@ -36,7 +37,8 @@ Ant design : در ui برای ساخت برخی المان ها و کامپون�
 FontAwesome : برای ایحاد آیکون ها/
 Chart js : برای ایجاد نمودار ها در صفحه اصلی داشبورد/
 express,cors : برای ایجاد سرور و ساخت API/
-uuid : برای id منحصر به فرد برای هر داده
+uuid : برای id منحصر به فرد برای هر داده/
+ckEditor : برای ادیتور متن در صفحه پشتیبانی
 
 # `Exchange Dashboard Using React`
 
@@ -72,4 +74,5 @@ Ant design : For create and use some elements and components in ui/
 FontAwesome : for creating icons/
 Chart js : For creating charts in dashboard main page/
 express,cors : for creating server and API/
-uuid : for unique id for each data
+uuid : for unique id for each data/
+ckEditor : for text editor in support section

@@ -1,7 +1,15 @@
 //imports
 import React, { useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Button, Modal, Tooltip, notification } from "antd";
+import {
+  Button,
+  Modal,
+  Tooltip,
+  notification,
+  Input,
+  Form,
+  Select,
+} from "antd";
 import { faUserCircle } from "@fortawesome/free-regular-svg-icons";
 import { faAngleDown, faBars } from "@fortawesome/free-solid-svg-icons";
 import { faBell } from "@fortawesome/free-regular-svg-icons";
@@ -9,10 +17,10 @@ import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { faShop } from "@fortawesome/free-solid-svg-icons";
-import { faHeadset } from "@fortawesome/free-solid-svg-icons";
 import { faCloudArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
-import { Input, Form, Select } from "antd";
+import { QuestionOutlined } from "@ant-design/icons";
+import { useNavigate } from "react-router-dom";
 import "./Header.css";
 const { Option } = Select;
 
@@ -41,7 +49,7 @@ const LocalizedModal = (props) => {
 
   return (
     <Modal
-      title="حساب من"
+      title="تغییر رمز عبور"
       open={props.open}
       onCancel={props.hideModal}
       okText="تایید"
@@ -138,6 +146,7 @@ const Header = (props) => {
   const [openMyAccount, setOpenMyAccount] = useState(false);
   const [open, setOpen] = useState(false);
   const [api, contextHolder] = notification.useNotification();
+  const [modal, contextHolder2] = Modal.useModal();
 
   //Refs
   const tabRefsNotif = useRef([]);
@@ -146,6 +155,7 @@ const Header = (props) => {
   const tabLineRefMessages = useRef(null);
 
   //Variables
+  const navigate = useNavigate() 
   const { Search } = Input;
 
   // this function handle the tabs green underline width and position
@@ -195,12 +205,34 @@ const Header = (props) => {
   // this function get the asideRef from Content Component (parent) and change the aside display and send the (openInMobile) to sideMenuHandler function in Content Component (parent)
   const showSideMenu = () => {
     props.asideRef.current.style.display = "block";
-    props.sideMenuHandler('openInMobile')
+    props.sideMenuHandler("openInMobile");
+  };
+
+  //this function log out user and remove the token from session storage
+  const logoutUser = () => {
+    navigate('/')
+    sessionStorage.removeItem("token");
+    window.location.reload();
+  };
+
+  //show confrim modal function
+  const confirm = () => {
+    modal.confirm({
+      title: "حذف",
+      icon: <QuestionOutlined />,
+      content: "ایا از خروج اطمینان دارید؟",
+      okText: "تایید",
+      cancelText: "انصراف",
+      onOk: () => {
+        logoutUser();
+      },
+    });
   };
 
   return (
     <div className="headerMain">
       {contextHolder}
+      {contextHolder2}
       <LocalizedModal
         showModal={showModalMyAccount}
         open={openMyAccount}
@@ -218,7 +250,7 @@ const Header = (props) => {
             <div className="ac-drop-drown header-items-modal">
               <div className="header">
                 <div className="header-username">
-                  <p>نام کاربری</p>
+                  <p>admin</p>
                 </div>
                 <div className="header-status">
                   <span></span>
@@ -237,14 +269,10 @@ const Header = (props) => {
                   شروع کسب کار جدید
                 </li>
                 <li>
-                  <FontAwesomeIcon className="icon" icon={faHeadset} />
-                  پشتیبانی
-                </li>
-                <li>
                   <FontAwesomeIcon className="icon" icon={faCloudArrowDown} />
                   دانلود اپلیکیشن دسکتاپ
                 </li>
-                <li>
+                <li onClick={() => confirm()}>
                   <FontAwesomeIcon
                     className="icon"
                     icon={faArrowRightFromBracket}
