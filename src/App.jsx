@@ -9,7 +9,6 @@ import "./App.css";
 const App = () => {
   //destructuring
   const {token , setToken} = UseToken()
-  
   // if the token doesn't exist this function wil invoke an render the login component and other components are no able to see and use
   if (!token) {
     return <Login setToken={setToken} />;

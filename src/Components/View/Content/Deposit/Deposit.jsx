@@ -1,5 +1,6 @@
 //imports
 import React, { useEffect, useRef, useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import { Link } from "react-router-dom";
 import { Form, Input, Select, Button, notification, message } from "antd";
 import { PoundCircleOutlined } from "@ant-design/icons";
@@ -95,6 +96,7 @@ const Deposit = () => {
     let depositArray = [];
     let depositFromLS = localStorage.getItem("Deposit");
     let depositObj = {
+      id: uuidv4(),
       account: `${values.account}`,
       amount: `${values.amount}`,
       depositMethod: `${depositMethod}`,

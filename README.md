@@ -13,7 +13,7 @@
 ### ` شرح پروژه`
 
 پروژه داشبورد با استفاده از کتابخانه React ساخته شده و شامل احراز هویت کاربر میباشد و برای ui هم از CSS استفاده شده.
- این برنامه به زبان فارسی نوشته شده و شامل بخش های :
+این برنامه به زبان فارسی نوشته شده,کاملا واکنش گراست و شامل بخش های :
 
 صفحه ورود/
 داشبورد (صفحه اصلی)/
@@ -32,11 +32,11 @@
 
 پکیج های استفاده شده در این پروژه شامل :
 react-router-dom : برای پیاده سازی و مدیریت route ها/
-Ant design :  در ui برای ساخت برخی المان ها و کامپوننت ها/
+Ant design : در ui برای ساخت برخی المان ها و کامپوننت ها/
 FontAwesome : برای ایحاد آیکون ها/
 Chart js : برای ایجاد نمودار ها در صفحه اصلی داشبورد/
-express,cors : برای ایجاد سرور و ساخت API.
-
+express,cors : برای ایجاد سرور و ساخت API/
+uuid : برای id منحصر به فرد برای هر داده
 
 # `Exchange Dashboard Using React`
 
@@ -53,7 +53,7 @@ to run the project in development mode
 ### `Project Description`
 
 The exchange dashboard project created by using React library and the app include user authentication and for the ui , CSS used.
-this project build in persian language and it inclueds these sections :
+this project build in persian language, its totaly responsive and it inclueds these sections :
 Login Page/
 Dashboard (Main Page)/
 Deposit/
@@ -62,7 +62,7 @@ Transfer/
 Reports/
 
 At first for use and test the project all section you have to create account from حساب ها > ایجاد حساب
-In this project I used customized Hook for managing user authentication.  
+In this project I used customized Hook for managing user authentication.
 
 ### `Packages`
 
@@ -71,4 +71,5 @@ react-router-dom : For create and managing routes/
 Ant design : For create and use some elements and components in ui/
 FontAwesome : for creating icons/
 Chart js : For creating charts in dashboard main page/
-express,cors : for creating server and API
+express,cors : for creating server and API/
+uuid : for unique id for each data

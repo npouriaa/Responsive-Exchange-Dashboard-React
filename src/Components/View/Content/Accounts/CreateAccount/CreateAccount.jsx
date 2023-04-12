@@ -1,5 +1,6 @@
 //imports
 import React, { useRef } from "react";
+import { v4 as uuidv4 } from "uuid";
 import { Form, Input, Select, Button, notification } from "antd";
 import "./CreateAccount.css";
 const { Option } = Select;
@@ -26,12 +27,25 @@ const CreateAccount = () => {
     openNotification("top");
     let usersArray = [];
     let userFromLS = localStorage.getItem("Users");
+    let obj = {
+      id: uuidv4(),
+      account: values.account,
+      email: values.email,
+      phone: values.phone,
+      password: values.password,
+      confrim: values.confrim,
+      platform: values.platform,
+      userType: values.userType,
+      currency: values.currency,
+      initial_deposite: values.initial_deposite,
+      address: values.address,
+    };
     if (userFromLS) {
       usersArray = JSON.parse(userFromLS);
     } else {
       usersArray = [];
     }
-    usersArray.push(values);
+    usersArray.push(obj);
     localStorage.setItem("Users", JSON.stringify(usersArray));
     frmRef.current?.resetFields();
   };
@@ -223,7 +237,7 @@ const CreateAccount = () => {
             <Form.Item
               className="frm-item-cr"
               hasFeedback
-              name="initial-deposite"
+              name="initial_deposite"
               label="سپرده اولیه"
               rules={[
                 {
@@ -239,7 +253,7 @@ const CreateAccount = () => {
               </Select>
             </Form.Item>
             <Form.Item
-            className="frm-item-cr"
+              className="frm-item-cr"
               hasFeedback
               name="address"
               label="آدرس"

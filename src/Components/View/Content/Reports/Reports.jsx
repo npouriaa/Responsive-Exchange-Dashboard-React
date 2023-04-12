@@ -1,7 +1,7 @@
 //imports
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { Table, Modal, notification , message } from "antd";
+import { Table, Modal, notification, message } from "antd";
 import {
   faArrowCircleDown,
   faArrowCircleUp,
@@ -19,7 +19,7 @@ const Reports = () => {
   const [tableColumns, setTableColumns] = useState([]);
   const [api, contextHolder2] = notification.useNotification();
   const [modal, contextHolder] = Modal.useModal();
-  
+
   //refs
   const tableConRef = useRef();
   const btnRefs = useRef([]);
@@ -27,9 +27,9 @@ const Reports = () => {
 
   // this function show message when user first enter to page
   const info = () => {
-    messageApi.info('لطفا نوع گزارش را انتخاب کنید');
+    messageApi.info("لطفا نوع گزارش را انتخاب کنید");
   };
-  
+
   //open notification function
   const openNotification = (placement) => {
     api.success({
@@ -42,10 +42,12 @@ const Reports = () => {
   //this function remove the item from the local storage array according to the given arguments and user selection
   const deleteItem = (e, LSkey) => {
     let arrayItem;
-    let name = e.target.parentElement.parentElement.children[0].textContent;
+    let id =
+      e.target.parentElement.parentElement.parentElement.children[0]
+        .textContent;
     let array = JSON.parse(localStorage.getItem(`${LSkey}`));
     array.map((item) => {
-      if (item.account === name) {
+      if (item.account === id) {
         arrayItem = item;
       }
     });
@@ -65,7 +67,7 @@ const Reports = () => {
       okText: "تایید",
       cancelText: "انصراف",
       onOk: () => {
-        deleteItem(e , LsKey);
+        deleteItem(e, LsKey);
         openNotification("top");
       },
     });
@@ -77,12 +79,17 @@ const Reports = () => {
     setTableData(array);
   };
 
-  //  this function fill the table data acccording to given argument 
+  //  this function fill the table data acccording to given argument
   const setTableColumnsHandler = (cName) => {
     let cArray = [...tableColumns];
 
     if (cName === "accounts") {
       cArray = [
+        {
+          title: "id",
+          dataIndex: "id",
+          key: "id",
+        },
         {
           title: "نام و نام خانوادگی",
           dataIndex: "account",
@@ -117,12 +124,23 @@ const Reports = () => {
         {
           title: "عملیات",
           dataIndex: "",
-          key: "x",
-          render: () => <a onClick={(e) => confirm(e , 'Users')}>حذف</a>,
+          key: "",
+          render: () => {
+            return (
+              <div className="deleteCon">
+                <a onClick={(e) => confirm(e, "Users")}>حذف</a>
+              </div>
+            );
+          },
         },
       ];
     } else if (cName === "deposits") {
       cArray = [
+        {
+          title: "id",
+          dataIndex: "id",
+          key: "id",
+        },
         {
           title: "حساب",
           dataIndex: "account",
@@ -141,12 +159,23 @@ const Reports = () => {
         {
           title: "عملیات",
           dataIndex: "",
-          key: "x",
-          render: () => <a onClick={(e) => confirm(e , 'Deposit')}>حذف</a>,
+          key: "",
+          render: () => {
+            return (
+              <div className="deleteCon">
+                <a onClick={(e) => confirm(e, "Deposit")}>حذف</a>
+              </div>
+            );
+          },
         },
       ];
     } else if (cName === "withdraws") {
       cArray = [
+        {
+          title: "id",
+          dataIndex: "id",
+          key: "id",
+        },
         {
           title: "حساب",
           dataIndex: "account",
@@ -175,12 +204,23 @@ const Reports = () => {
         {
           title: "عملیات",
           dataIndex: "",
-          key: "x",
-          render: () => <a onClick={(e) => confirm(e , 'Withdraw')}>حذف</a>,
+          key: "",
+          render: () => {
+            return (
+              <div className="deleteCon">
+                <a onClick={(e) => confirm(e, "Withdraw")}>حذف</a>
+              </div>
+            );
+          },
         },
       ];
     } else {
       cArray = [
+        {
+          title: "id",
+          dataIndex: "id",
+          key: "id",
+        },
         {
           title: "از حساب",
           dataIndex: "from_acc",
@@ -200,8 +240,14 @@ const Reports = () => {
         {
           title: "عملیات",
           dataIndex: "",
-          key: "x",
-          render: () => <a onClick={(e) => confirm(e , 'Transfer')}>حذف</a>,
+          key: "",
+          render: () => {
+            return (
+              <div className="deleteCon">
+                <a onClick={(e) => confirm(e, "Transfer")}>حذف</a>
+              </div>
+            );
+          },
         },
       ];
     }
@@ -219,7 +265,7 @@ const Reports = () => {
 
   //useeffect
   useEffect(() => {
-    info()
+    info();
     return () => {};
   }, []);
 

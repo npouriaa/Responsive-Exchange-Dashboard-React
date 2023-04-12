@@ -1,5 +1,6 @@
 //imports
 import React, { useRef, useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import { Form, Input, Select, Button, notification } from "antd";
 import "./Withdraw.css";
 const { Option } = Select;
@@ -42,7 +43,7 @@ const Withdraw = () => {
       setWithdrawMethod("others");
     }
   };
-  
+
   //this function change the crypto deposit method network according to user selected currency
   const changeNetworkItems = (e) => {
     if (e === "BTC") {
@@ -56,12 +57,30 @@ const Withdraw = () => {
   const onFinish = (values) => {
     let withdrawsArray = [];
     let withdrawFromLS = localStorage.getItem("Withdraw");
+    let obj;
+    if(values.withdraw_method === 'Others'){
+      obj = {
+        id : uuidv4(),
+        account : values.account,
+        withdraw_method : values.withdraw_method,
+        amount : values.amount
+      }
+    }else{
+      obj = {
+        id : uuidv4(),
+        account : values.account,
+        withdraw_method : values.withdraw_method,
+        currency : values.currency,
+        network : values.network,
+        amount : values.amount
+      }
+    }
     if (withdrawFromLS) {
       withdrawsArray = JSON.parse(withdrawFromLS);
     } else {
       withdrawsArray = [];
     }
-    withdrawsArray.push(values);
+    withdrawsArray.push(obj);
     localStorage.setItem("Withdraw", JSON.stringify(withdrawsArray));
     openNotification("top");
     frmRef.current?.resetFields();
