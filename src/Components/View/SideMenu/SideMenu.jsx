@@ -26,6 +26,7 @@ const SideMenu = (props) => {
   const withdraw = useRef();
   const transfer = useRef();
   const reports = useRef();
+  const support = useRef();
 
   //this function open and close the side menu (trigger)
   const triggerHandler = (e) => {
@@ -149,12 +150,12 @@ const SideMenu = (props) => {
           onClick={() => {
             lineHandler(6);
             hideSideMenuInMobile();
-            props.shwoHeaderTitle(reports.current);
+            props.shwoHeaderTitle(support.current);
           }}
         >
           <Link to="/support" className="link side-link">
             <FontAwesomeIcon className="icon" icon={faHeadset} />
-            <p ref={reports}>پشتیبانی</p>
+            <p ref={support}>پشتیبانی</p>
           </Link>
         </li>
       </ul>
